@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMore - African Herbs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .free-consultation {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .call-header {
+            background: #ff9500;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .call-header:hover {
+            background: #e68500;
+            transform: scale(1.05);
+        }
+
+        .marquee-container {
+            background: #ff9500;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+            color: #333;
+            font-weight: bold;
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(100%, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+            padding: 20px;
+        }
+
+        .product-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        .call-now-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff9500;
+            color: black;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 149, 0, 0.3);
+        }
+
+        .call-now-btn:hover {
+            background: #e68500;
+            transform: translateX(-50%) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 149, 0, 0.5);
+        }
+
+        .decorative-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .circle {
+            position: absolute;
+            border: 2px solid rgba(255, 149, 0, 0.2);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .circle2 {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .circle3 {
+            width: 80px;
+            height: 80px;
+            top: 40%;
+            left: 80%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @media (max-width: 768px) {
+            .product-image {
+                max-width: 300px;
+            }
+            
+            .call-now-btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+            
+            .free-consultation {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-elements">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+
+    <div class="header">
+        <div class="free-consultation">Free Consultation</div>
+        <a href="tel:7678334575" class="call-header">📞 Call Now : 07313 643669</a>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-text">
+            पुरुषों की पहली पसंद   पावर, जोश और टाइमिंग बढ़ाएं   पुरुषों की पहली पसंद   पावर, जोश और टाइमिंग बढ़ाएं   पुरुषों की पहली पसंद
+        </div>
+    </div>
+
+    <div class="logo">
+        <div class="logo-text">
+           PlayMore - African Herbs
+        </div>
+    </div>
+
+    <div class="product-container">
+        <img src="https://playmoreherbs.org/wp-content/uploads/2025/06/Play-More-Bottle-Latest-1536x1536.png" class="product-image" />
+    </div>
+
+    <a href="tel:7678334575" class="call-now-btn">
+        CALL NOW
+    </a>
+
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event to product image for extra interactivity
+            const productImage = document.querySelector('.product-image');
+            productImage.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+
+            // Add floating animation to decorative circles
+            const circles = document.querySelectorAll('.circle');
+            circles.forEach((circle, index) => {
+                circle.style.animationDelay = `${index * 2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
